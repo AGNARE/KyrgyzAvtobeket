@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bus"
+            android:layout_width="210dp"
+            android:layout_height="120dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/pngwing"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="КЫРГЫЗ АВТОБЕКЕТИ"
+            app:layout_constraintStart_toEndOf="@id/bus"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="12dp"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/etSelectCity"
+            android:layout_width="348dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/edittext"
+            android:hint="Откуда"
+            android:paddingStart="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bus" />
+
+
+        <EditText
+            android:id="@+id/slectCitySecond"
+            android:layout_width="348dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/edittext"
+            android:hint="Куда"
+            android:paddingStart="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etSelectCity" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:background="@drawable/imagebutton"
+            android:src="@drawable/icbaseline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/slectCitySecond"
+            android:layout_marginTop="210dp"
+            android:layout_marginEnd="52dp"/>
+
+        <EditText
+            android:id="@+id/calendar"
+            android:layout_width="170dp"
+            android:layout_height="52dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slectCitySecond"
+            app:layout_constraintEnd_toStartOf="@id/newDate"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/edittext"
+            android:layout_marginStart="32dp"
+            android:hint="Выберите дату"
+            android:paddingStart="14dp"/>
+
+        <TextView
+            android:id="@+id/newDate"
+            android:layout_width="170dp"
+            android:layout_height="52dp"
+            android:hint="Обратно"
+            app:layout_constraintTop_toBottomOf="@id/slectCitySecond"
+            app:layout_constraintStart_toEndOf="@id/calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="32dp"
+            android:paddingVertical="14dp"
+            android:paddingStart="14dp"
+            android:layout_marginStart="5dp"
+            android:textSize="18sp"
+            android:background="@drawable/edittext"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search"
+            android:layout_width="348dp"
+            android:layout_height="52dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calendar"
+            android:layout_marginTop="20dp"
+            android:text="искать"
+            android:backgroundTint="@color/orange"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:id="@+id/booking"
+                    android:layout_width="96dp"
+                    android:layout_height="61dp"
+                    android:drawableTop="@drawable/ic_bus"
+                    android:layout_marginHorizontal="3dp"
+                    android:gravity="center"
+                    android:text="Бронирование"/>
+
+                <TextView
+                    android:id="@+id/ticket"
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:drawableTop="@drawable/ic_ticket"
+                    android:layout_marginHorizontal="3dp"
+                    android:gravity="center"
+                    android:text="Билет"/>
+
+                <TextView
+                    android:id="@+id/stops"
+                    android:layout_width="81dp"
+                    android:layout_height="61dp"
+                    android:drawableTop="@drawable/iclocation"
+                    android:layout_marginHorizontal="3dp"
+                    android:gravity="center"
+                    android:text="Остановки"/>
+
+                <TextView
+                    android:id="@+id/register"
+                    android:layout_width="137dp"
+                    android:layout_height="61dp"
+                    android:drawableTop="@drawable/ic_man"
+                    android:layout_marginHorizontal="3dp"
+                    android:gravity="center"
+                    android:text="Регистрация"/>
+
+            </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>

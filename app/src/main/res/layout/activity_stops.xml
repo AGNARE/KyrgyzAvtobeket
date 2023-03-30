@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StopsActivity">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="348dp"
+        android:layout_height="54dp"
+        android:background="@drawable/edittext"
+        android:hint="🔍︎ Искать остановки в городе"
+        android:paddingStart="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="34dp"/>
+
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/findStation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Найти станцию рядом с вами"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgLocation"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Включите геолокацию что бы найти ближайщие станции"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/findStation"
+        android:layout_marginTop="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backMain"
+        android:layout_width="166dp"
+        android:layout_height="64dp"
+        android:backgroundTint="@color/orange"
+        android:text="на главную"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="166dp"
+        android:layout_height="64dp"
+        android:backgroundTint="@color/orange"
+        android:text="Включить геолокацию"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="18dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
